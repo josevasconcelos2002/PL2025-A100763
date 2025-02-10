@@ -2,7 +2,7 @@
 
 def soma_digitos(nome_ficheiro):
     soma = 0
-    on = False
+    on = True
     ficheiro = open(nome_ficheiro)
 
     for linha in ficheiro:
@@ -36,18 +36,13 @@ def soma_digitos(nome_ficheiro):
 
     ficheiro.close()
 
-# Exercicio 2
-
 def has_off(word):
     return "off" in word.lower()
 
-# Exercicio 3
 
 def has_on(word):
     return "on" in word.lower()
 
-
-# Exercicio 4
 
 def nr_equals(word):
     nr = 0
@@ -55,9 +50,6 @@ def nr_equals(word):
         if char == "=":
             nr += 1
     return nr
-
-
-
 
 def main():
     soma_digitos("./testes/teste1.txt")
