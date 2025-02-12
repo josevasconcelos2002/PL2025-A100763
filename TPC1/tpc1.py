@@ -1,3 +1,36 @@
+
+import re
+
+# Exercicio, versao regex
+def soma_digitos_regex(nome_ficheiro):
+    soma = 0
+    on = True
+
+    with open(nome_ficheiro) as ficheiro:
+        for linha in ficheiro:
+            linha = linha.strip()
+
+            # Divide a linha em palavras para processá-las separadamente
+            palavras = linha.split()
+
+            for palavra in palavras:
+                if re.search(r'\boff\b', palavra, re.I):
+                    on = False
+                    print("OFF")
+                elif re.search(r'\bon\b', palavra, re.I):
+                    on = True
+                    print("ON")
+
+                if "=" in palavra:
+                    print("Soma:", soma)
+
+                # Se estiver "ON", soma os números dentro da palavra
+                if on:
+                    numeros = re.findall(r'\d+', palavra)
+                    soma += sum(map(int, numeros))  
+
+
+
 # Exercicio 1
 
 def soma_digitos(nome_ficheiro):
@@ -53,5 +86,5 @@ def nr_equals(word):
 
 def main():
     soma_digitos("./testes/teste1.txt")
-
+    soma_digitos_regex("./testes/teste1.txt")
 main()
