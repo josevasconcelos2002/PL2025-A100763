@@ -8,7 +8,7 @@ Número Mecanográfico: A100763 <br> <br> <br>
 
 <br>
 
-**Resumo**
+## **Resumo**
 
 Programa escrito em Python, responsável por somar todas as sequências de dígitos que encontrar num texto, tendo em conta os seguintes requisitos:
 
@@ -18,4 +18,28 @@ Programa escrito em Python, responsável por somar todas as sequências de dígi
 
 * Sempre que encontrar o caráter "=", o resultado da soma é colocado na saída.
 
-**Resultados**
+## **Resultados**
+
+**Teste**
+
+```
+Soma_digitos:
+
+Soma: 70
+OFF
+Soma: 70
+ON
+Soma: 140
+
+Soma_digitos_regex:
+
+Soma: 70
+OFF
+Soma: 70
+ON
+Soma: 140
+```
+
+### Ficheiro para efeitos de Testes
+
+[teste1](./testes/teste1.txt)

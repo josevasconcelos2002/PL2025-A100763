@@ -85,6 +85,8 @@ def nr_equals(word):
     return nr
 
 def main():
+    print("\nSoma_digitos: \n")
     soma_digitos("./testes/teste1.txt")
+    print("\nSoma_digitos_regex: \n")
     soma_digitos_regex("./testes/teste1.txt")
 main()
