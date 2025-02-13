@@ -43,3 +43,9 @@ Soma: 140
 ### Ficheiro para efeitos de Testes
 
 [teste1](./testes/teste1.txt)
+
+```
+O valor é 50 e o outro é 20. =
+off 100a b200 =
+on 30a e40 =
+```
