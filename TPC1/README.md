@@ -26,19 +26,13 @@ Programa escrito em Python, responsável por somar todas as sequências de dígi
 ```
 Soma_digitos:
 
-Soma: 70
-OFF
-Soma: 70
-ON
-Soma: 140
+Soma: 2032
+Soma: 2032
 
 Soma_digitos_regex:
 
-Soma: 70
-OFF
-Soma: 70
-ON
-Soma: 140
+Soma: 2032
+Soma: 2032
 ```
 
 ### Ficheiro para efeitos de Testes
@@ -46,7 +40,9 @@ Soma: 140
 [teste1](./testes/teste1.txt)
 
 ```
-O valor é 50 e o outro é 20. =
-off 100a b200 =
-on 30a e40 =
+Hoje, 7 de Fevereiro de 2025, o professor de Processamento de Linguagens
+deu-nos
+este trabalho para fazer.=
+E deu-nos 7= dias para o fazer...
+Cada trabalho destes vale 0.25 valores da nota final!
 ```
