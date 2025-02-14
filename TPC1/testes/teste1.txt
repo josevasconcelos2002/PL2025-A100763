@@ -1,3 +1,5 @@
-O valor é 50 e o outro é 20. =
-off 100a b200 =
-on 30a e40 =
+Hoje, 7 de Fevereiro de 2025, o professor de Processamento de Linguagens
+deu-nos
+este trabalho para fazer.=
+E deu-nos 7= dias para o fazer...
+Cada trabalho destes vale 0.25 valores da nota final!
