@@ -75,10 +75,16 @@ def lista_compositores(obras_dic):
 
     for obra in obras_dic.values():
         compositor = obra.get("compositor", "").strip()
-        if compositor:  
-            compositores.add(compositor)  
+        if compositor:
+            
+            if "," in compositor:
+                partes = compositor.split(",", 1) 
+                compositor = partes[1].strip() + " " + partes[0].strip()  
+
+            compositores.add(compositor)
 
     return sorted(compositores)
+
 
 def nr_obras_por_periodo(obras_dic):
     dic = {}
@@ -104,10 +110,10 @@ def obras_por_periodo(obras_dic):
 
 def main():
     obras_dic = csv_parser("./assets/obras.csv")
-    lista_compositores_ordenada = lista_compositores(obras_dic)
-    print(lista_compositores_ordenada)
-    n_obras_por_periodo = nr_obras_por_periodo(obras_dic)
-    print(n_obras_por_periodo)
+    #lista_compositores_ordenada = lista_compositores(obras_dic)
+    #print(lista_compositores_ordenada)
+    #n_obras_por_periodo = nr_obras_por_periodo(obras_dic)
+    #print(n_obras_por_periodo)
     obras_por_periodo_dic = obras_por_periodo(obras_dic)
     print(obras_por_periodo_dic)
 
