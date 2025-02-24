@@ -10,4 +10,4 @@ Texto normal com **negrito** e *itálico*.
 
 Veja [Google](https://www.google.com).
 
-Imagem: <img src="https://via.placeholder.com/150" alt="Exemplo"/>
+Imagem: <img src="#" alt="Exemplo"/>
