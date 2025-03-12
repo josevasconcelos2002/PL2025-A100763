@@ -58,3 +58,23 @@ class Maquina_Vending:
 
         self.saldo = 0.0
         return ", ".join(f"{qtd}x {moeda}" for moeda, qtd in resultado_troco.items())
+    
+    def selecionar_produto(self, codigo_produto):
+            produto = None
+            for item in self.stock:
+                if item['cod'] == codigo_produto:
+                    produto = item
+            
+            if produto is None:
+                print("maq: Código inválido.")
+                return
+            
+            if self.saldo < produto['preco']:
+                print("maq: Saldo insuficiente para satisfazer o seu pedido")  
+                print(f"maq: Saldo = {int(self.saldo * 100)}c}; Pedido = {produto['preco']}")
+            elif produto['quant'] > 0:
+                self.saldo -= produto['preco']
+                print(f"maq: Pode retirar o produto dispensado \"{produto['nome']}\"")
+                print(f"maq: Saldo = {int(self.saldo * 100)}c")
+                produto['quant'] -= 1
+   

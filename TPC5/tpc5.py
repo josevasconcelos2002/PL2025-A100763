@@ -27,16 +27,21 @@ def start(stock_file):
                     maquina.listar()
                 
                 case "MOEDA":
-                    moedas = comando[6:].replace(".", "").split(",")  # Remove o ponto final e separa moedas
-                    moedas = [m.strip() for m in moedas]  # Remove espaços extras
+                    moedas = comando[6:].replace(".", "").split(",")
+                    moedas = [m.strip() for m in moedas]
                     maquina.inserir_moedas(moedas)
                     saldo = maquina.verificar_saldo()
                     print(f"maq: Saldo = {int(saldo)}e{int((saldo * 100) % 100)}c")
+                    
+                case "SELECIONAR":
+                    produto = comando_lista[1]
+                    maquina.selecionar_produto(produto)
                 
                 case "SAIR":
                     troco = maquina.devolver_troco()
                     if troco:
                         print("maq: Pode retirar o troco:", troco)
+                    # guardar estado !
                     print("maq: Até à próxima!")
                     break
                 
