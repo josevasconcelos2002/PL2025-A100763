@@ -1,8 +1,10 @@
 import re
+import json
 
 class Maquina_Vending:
     
     def __init__(self):
+        self.stock_file = ""
         self.stock = {}
         self.saldo = 0.0
         
@@ -85,4 +87,10 @@ class Maquina_Vending:
         print("-> SELECIONAR <codigo_produto>")
         print("-> SAIR")
             
-            
+    def guardar_estado(self):
+            if self.stock_file:
+                with open(self.stock_file, "w") as f:
+                    json.dump({"stock": self.stock}, f, indent=4, ensure_ascii=False)
+                print("maq: Estado guardado com sucesso!")
+            else:
+                print("maq: Erro ao guardar o estado. Nenhum ficheiro associado.")

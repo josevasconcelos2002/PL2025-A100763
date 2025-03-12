@@ -10,8 +10,9 @@ def start(stock_file):
         data = json.load(f)
 
     stock = data["stock"]
-        
+    
     maquina = Maquina_Vending()
+    maquina.stock_file = stock_file
     maquina.set_stock(stock)
     #maquina.ver_stock()
     if maquina.stock:
@@ -44,7 +45,8 @@ def start(stock_file):
                     troco = maquina.devolver_troco()
                     if troco:
                         print("maq: Pode retirar o troco:", troco)
-                    # guardar estado !
+                    
+                    maquina.guardar_estado()
                     print("maq: Até à próxima!")
                     break
                 

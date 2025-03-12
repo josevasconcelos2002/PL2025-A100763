@@ -14,6 +14,9 @@ Programa escrito em python, que simula uma máquina de vending.
 
 Inicialmente, é carregado um ficheiro JSON que listas de triplos,
 compostas pelo nome do produto, quantidade e preço. (ficheiro de exemplo [stock.json](stock.json))
+Após esta operação, a máquina está pronta a receber instruções por parte do utilizado.
+
+Após o utilizador executar o comando "SAIR", o estado atual do stock é guardado no ficheiro fornecido no início do programa.
 
 
 ## **Comandos**
@@ -64,5 +67,6 @@ Exemplo:
 ```
 >> SAIR
 maq: Pode retirar o troco: 1x 50c, 1x 20c e 2x 2c
-maq: Até à próxima
+maq: Estado guardado com sucesso!
+maq: Até à próxima!
 ```
