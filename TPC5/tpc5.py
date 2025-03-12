@@ -37,6 +37,9 @@ def start(stock_file):
                     produto = comando_lista[1]
                     maquina.selecionar_produto(produto)
                 
+                case "AJUDA":
+                    maquina.ajuda()
+                
                 case "SAIR":
                     troco = maquina.devolver_troco()
                     if troco:

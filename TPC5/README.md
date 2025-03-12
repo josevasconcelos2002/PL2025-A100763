@@ -18,19 +18,32 @@ compostas pelo nome do produto, quantidade e preço. (ficheiro de exemplo [stock
 
 ## **Comandos**
 
-### AJUDA
+#### AJUDA
 ```
 >> AJUDA
+COMANDOS DISPONÍVEIS:
+-> LISTAR
+-> MOEDA <moedas>
+-> SELECIONAR <codigo_produto>
+-> SAIR
 ```
 
-### LISTAR
+#### LISTAR
 Exemplo:
 ```
 >> LISTAR
+maq:
+cod  | nome              | quantidade | preço
+--------------------------------------------
+A23  | água 0.5L         |          8 |  0.70€
+B14  | Coca-Cola 0.5L    |          5 |  1.20€
+C56  | Pepsi 0.5L        |         10 |  1.10€
+D89  | Fanta 0.5L        |          6 |  1.00€
+E22  | Limonada 0.5L     |          4 |  1.30€
 ```
 
 
-### SELECIONAR
+#### SELECIONAR
 Exemplo:
 ```
 >> SELECIONAR A23
@@ -38,7 +51,7 @@ Exemplo:
 ```
 
 
-### MOEDA
+#### MOEDA
 Exemplo:
 ```
 >> MOEDA 1e, 20c, 5c, 5c .
@@ -46,16 +59,10 @@ maq: Saldo = 1e30c
 
 ```
 
-### SAIR
+#### SAIR
 Exemplo:
 ```
 >> SAIR
-maq: Pode retirar o troco: 1x 50c, 1x 20c e 2x 2c.
+maq: Pode retirar o troco: 1x 50c, 1x 20c e 2x 2c
 maq: Até à próxima
 ```
-
-
-## **Resultados**
-
-
-

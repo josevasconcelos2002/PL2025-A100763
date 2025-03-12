@@ -77,3 +77,12 @@ class Maquina_Vending:
             print(f"maq: Pode retirar o produto dispensado \"{produto['nome']}\"")
             print(f"maq: Saldo = {self.saldo}")
             produto['quant'] -= 1
+            
+    def ajuda(self):
+        print("COMANDOS DISPONÍVEIS:")
+        print("-> LISTAR")
+        print("-> MOEDA <moedas>")
+        print("-> SELECIONAR <codigo_produto>")
+        print("-> SAIR")
+            
+            
